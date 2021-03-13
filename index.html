@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style type="text/css">
+		h3, h2{
+			text-align: center;
+		}
+		.main{
+			width: 80%;
+			margin: 12px auto;
+		}
+		p{
+			text-align: justify;
+		}
+		body{
+			font-size: 1.2em;
+		}
+		.main-elements{
+			font-size: 1.4em;
+			background: lightgreen;
+			border: 2px dashed green; 
+		}
+		.main-elements li{
+			margin-top: 12px;
+		}
+		pre{
+			font-size: 1.2em;
+			color: navy;
+			
+		}
+	</style>
+	
+	</head>
+	
+	<body>
+		<div class="main">
+			<h3>Добро пожаловать на первое 
+			занятие!</h3>
+		<h2>Основы HTML</h2>
+		<p>
+			<strong>HTML</strong> (HyperText Markup Language — «язык гипертекстовой разметки») — самый базовый строительный блок 	<a href="https://developer.mozilla.org/en-US/docs/Glossary/World_Wide_Web">Веба</a>. Он определяет содержание и 	структуру веб-контента. 
+		</p>
+
+		<p>Под гипертекстом ("hypertext")&nbsp;понимаются&nbsp;ссылки, которые соединяют веб-страницы друг с другом&nbsp;.</p>
+
+		<p>HTML использует разметку ("markup")&nbsp;для отображения текста, изображений и другого контента в веб-браузере. HTML-разметка включает в себя специальные "элементы".</p>
+
+		<p>HTML не является языком программирования; это <em>язык разметки</em>, и используется, чтобы сообщать вашему браузеру, как отображать веб-страницы, которые вы посещаете. HTML состоит из ряда <strong>элементов</strong>, которые вы используете, чтобы вкладывать или оборачивать различные части контента, чтобы заставить контент отображаться или действовать определенным образом. Ограждающие теги могут сделать слово или изображение ссылкой на что-то еще, могут сделать слова курсивом, сделать шрифт больше или меньше и так далее. 
+		Например, возьмем следующую строку контента:</p>
+
+		<pre class="notranslate">Моя кошка очень раздражена</pre>
+
+		<p>Если бы мы хотели, чтобы строка стояла сама по себе, мы могли бы указать, что это абзац, заключая его в теги абзаца:</p>
+		<div>
+			<pre class="brush: html notranslate"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>Моя кошка очень раздражена<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span></code></pre>
+		</div>
+
+		<h3>Анатомия HTML элемента</h3>
+		<p>Давайте рассмотрим элемент абзаца более подробно.</p>
+
+		<p><img alt="" src="https://mdn.mozillademos.org/files/9347/grumpy-cat-small.png" style="display: block; margin: 0px auto;" loading="lazy"></p>
+
+		<p>Главными частями нашего элемента являются:</p>
+
+		<ol>
+			 <li>
+			 	<strong>Открывающий тег (Opening tag)</strong>: Состоит из имени&nbsp;элемента (в данном случае, "p"), заключенного в открывающие и закрывающие <strong>угловые скобки</strong>.&nbsp; Открывающий тег&nbsp;указывает, где элемент начинается или начинает действовать, в данном случае — где начинается абзац.
+			 </li>
+			 <li>
+			 	<strong>Закрывающий тег (Closing tag):</strong> Это то же самое, что и открывающий тег, за исключением того, что он включает в себя косую черту перед именем элемента. Закрывающий элемент указывает, где элемент заканчивается, в данном случае — где заканчивается абзац. Отсутствие закрывающего тега является одной из наиболее распространенных ошибок начинающих и может приводить к странным результатам.
+			 </li>
+			 <li>
+			 	<strong>Контент (Content)</strong>: Это контент элемента, который в данном случае является просто текстом.</li>
+			 <li>
+			 	<strong>Элемент(Element)</strong>: Открывающий тег,&nbsp;закрывающий тег и контент вместе составляют элемент.
+			 </li>
+		</ol>
+	
+
+	<h3>Вложенные элементы</h3>
+	<div>
+		<p>Вы также можете располагать элементы внутри других элементов — это называется <strong>вложением</strong>. Если мы хотим заявить, что наша кошка <strong>очень</strong> раздражена, мы можем заключить слово "очень" в элемент <code>&lt;strong&gt;</code>, который указывает, что слово должно быть сильно акцентированно:</p>
+
+		<pre class="brush: html notranslate"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>Моя кошка <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>strong</span><span class="token punctuation">&gt;</span></span>очень<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>strong</span><span class="token punctuation">&gt;</span></span> раздражена.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span></code></pre>
+
+		<p>Вы, однако, должны убедиться, что ваши элементы правильно вложены: в примере выше мы открыли первым элемент <code>&lt;p&gt;</code>, затем элемент <code>&lt;strong&gt;</code>, потом мы должны закрыть сначала элемент <code>&lt;strong&gt;</code>, затем <code>&lt;p&gt;</code>. Приведенное ниже неверно:</p>
+
+		<pre class="example-bad brush: html notranslate"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>Моя кошка <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>strong</span><span class="token punctuation">&gt;</span></span>очень раздражена.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>strong</span><span class="token punctuation">&gt;</span></span></code></pre>
+
+		<p>Элементы должны открываться и закрываться правильно, поэтому они явно располагаются внутри или снаружи друг друга. Если они перекрываются, как в примере выше,&nbsp; ваш веб-браузер будет пытаться сделать наилучшее предположение на основе того, что вы пытались сказать, что может привести к неожиданным результатам. Так что не стоит этого делать!</p>
+	</div>
+
+	<h3>Анатомия HTML документа</h3>
+	<div>
+		<p>Посмотрим, как отдельные элементы объединяются в целую HTML страницу.</p>
+
+<pre class="brush: html notranslate"><code><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Моя тестовая страница<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>images/firefox-icon.png<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Моё тестовое изображение<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span></code></pre>
+
+<p>Здесь мы имеем:</p>
+
+	<ul>
+		 <li><code>&lt;!DOCTYPE html&gt;</code> — доктайп. На самом деле просто исторический артефакт, который должен быть включен для того, что бы все работало правильно. На данный момент это все, что вам нужно знать.</li>
+		 <li><code>&lt;html&gt;&lt;/html&gt;</code> — элемент <code>&lt;html&gt;</code>.&nbsp;Этот элемент оборачивает весь контент на всей странице, и иногда известен как корневой элемент.</li>
+		 <li><code>&lt;head&gt;&lt;/head&gt;</code> — элемент <code>&lt;head&gt;</code>.&nbsp;Этот элемент - контейнер для всего, что не являются </em>контентом, вашей страницы. Такие вещи, как ключевые слова и описание страницы, CSS стили нашего контента, кодировка и многое другое.</li>
+		 <li><code>&lt;body&gt;&lt;/body&gt;</code> — элемент <code>&lt;body&gt;</code>. В нем содержится <em>весь</em> контент, который вы хотите показывать пользователям, когда они посещают вашу страницу, будь то текст, изображения, видео, игры, проигрываемые аудиодорожки или что-то еще.</li>
+		 <li><code>&lt;meta charset="utf-8"&gt;</code> — этот элемент устанавливает UTF-8 кодировку вашего документа, которая включает в себя большинство символов из всех известных человечеству языков. По сути, теперь документ может обрабатывать любой текстовый контент, который вы в него вложите. Нет причин не устанавливать её, так как это может помочь избежать некоторых проблем в дальнейшем.</li>
+		 <li><code>&lt;title&gt;&lt;/title&gt;</code> — элемент <code>&lt;title&gt;</code>. Этот элемент устанавливает заголовок для вашей страницы, который является названием, появляющимся на вкладке браузера загружаемой страницы, и используется для описания страницы, когда вы добавляете ее в закладки/избранное.</li>
+	</ul>
+
+</div>
+	<h2 style="color: green;">Основные элементы</h2>
+	<ul class="main-elements">
+		<li>Изображения</li>
+		<li>Заголовки</li>
+		<li>Абзацы(Параграфы)</li>
+		<li>Списки</li>
+		<li>Ссылки</li>
+	</ul>
+
+
+	</div>
+
+
+</body>
+</html>
