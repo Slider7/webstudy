@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML task 1</title>
+    <style>
+        h2, h3, h4, p{
+            text-align: center;
+        }
+        .content{
+            width: 75%;
+            margin: 10px auto;
+        }
+        .task{
+            border: 2px dashed red;
+            background: lightgreen;
+            font-size: 1.4rem;
+            width: 75%;
+            margin: auto;
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+        .task-start{
+            border: 2px solid green;
+            background: skyblue;
+            font-size: 1.3rem;
+            width: 75%;
+            margin: 10px auto;
+        }
+        .add-task{
+            font-size: 1.2rem;   
+            width: 75%;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <h2>Задание: разметка письма</h2>
+    <div class="content">
+        <div class="task-start">
+            <p>
+            В этом задании у вас будет письмо для проверки ваших навыков форматирования текста HTML, использования гиперссылок и элемента head.
+            </p>
+            <p>Внимательно! читаем условие задания, смотрим на пример, и потом приступаем. </p>
+            <p>!! В НАЧАЛЕ создаем нужные папки, в Sublime СОХРАНЯЕМ ФАЙЛ, как указано в задании и только после этого начинаем писать код !!</p>
+        </div>
+        <p class="task"> Вам нужно в Вашей папке <b>Tasks</b> создать файл <b>task-letter.html</b>
+            <br>В этом файле Вы должны сохранить Ваше задание. 
+        </p>
+
+        <h3>Вот текст письма который Вам нужно разметить, скопируйте его в Ваш файл:
+        <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/marking-up-a-letter-start/letter-text.txt" class="external" rel=" noopener">скачать текст(выделите и скопируйте)</a>
+        <p>
+             CSS стиль, который вы должны подключить к вашему HTML: 
+            <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/marking-up-a-letter-start/css.txt" class="external" rel=" noopener">CSS стиль(выделите и скопируйте)</a>
+        </p>
+        </h3>
+
+        <hr>
+
+        <div class="add-task">
+            <p>Ваша задача - отформатировать письмо, которое должно быть размещено во внутренней сети университета. Это письмо - ответ исследователя будущему PhD студенту о его заявлении на работу в университете.</p>
+
+        <p>Блочные элементы / структура:</p>
+
+        <ul>
+         <li>Вы должны корректно структурировать весь документ, включив в него&nbsp;элементы doctype, и <a href="/ru/docs/Web/HTML/Element/html"><code>&lt;html&gt;</code></a>, <a href="/ru/docs/Web/HTML/Element/head"><code>&lt;head&gt;</code></a> и <a href="/ru/docs/Web/HTML/Element/body"><code>&lt;body&gt;</code></a>.</li>
+         <li>Письмо в целом должно быть&nbsp;размечено используя параграфы и заголовки, за&nbsp;исключением следующих пунктов - один заголовок верхнего уровня (начинается на "Re:") и три заголовка второго уровня.</li>
+         <li>Даты начала семестра, изучения предметов и экзотических танцев должны быть помечены используя соответствующие типы списков.</li>
+         <li>Два адреса должны быть помещены внутри&nbsp;элементов&nbsp;<a href="/ru/docs/Web/HTML/Element/address"><code>&lt;address&gt;</code></a>. Каждая строка адреса должна находиться на новой строке, но не быть новым параграфом.</li>
+        </ul>
+
+        <p>Строчные элементы:</p>
+
+        <ul>
+         <li>Имена&nbsp;отправителя и получателя (как и "Tel" и "Email") должны быть выделены жирным.</li>
+         <li>Четырем&nbsp;датам&nbsp;в документе необходимо выбрать правильные элементы содержащие машинно-читаемые даты.</li>
+         <li>Первый адрес и первая дата в письме должны иметь атрибут <code>class</code>&nbsp;со значением <code>"sender-column"</code>; CSS стиль, который вы добавите позже, позволит выравнять по правому&nbsp;боку, как оно и должно быть в классической разметке письма.</li>
+         <li>Пять акронимов/аббревиатур в главном тексте письма должны быть размечены, чтобы предоставить подсказки для каждого акронима/аббревиатуры.</li>
+         <li>Шесть под/надстрочных элементов должны быть оформлены корректно в химической формуле, как и&nbsp;числа 10<sup>3</sup> и 10<sup>4&nbsp;</sup>(степень числа должна быть над числом).</li>
+         <li>Для разметки символов градуса и умножения воспользуйтесь <a href="https://ru.wikipedia.org/wiki/Мнемоники_в_HTML" class="external" rel=" noopener">справкой</a>.</li>
+         <li>Постарайтесь выделить&nbsp;как минимум два нужных по смыслу слова в тексте жирным.</li>
+         <li>Есть два места, где следует&nbsp;разместить&nbsp;гиперссылки; добавьте нужные ссылки с заголовками. В качестве адреса для ссылок&nbsp;используйте http://example.com.</li>
+         <li>Девиз университета и цитата должны быть размечены&nbsp;соответствующими элементами.</li>
+        </ul>
+
+        <p>Заголовок документа:</p>
+
+        <ul>
+         <li>Кодировка документа должна быть указана как utf-8 с использованием соответствующего мета-тега.</li>
+         <li>Автор письма должен быть указан в соответствующем мета-теге.</li>
+         <li>Предоставленный CSS должен быть включён в соответствующий тег.</li>
+        </ul>
+        </div>
+
+        <h3>Вот что у Вас должно получиться:</h3>
+        <h4>Успешного решения!</h4>
+        <img src="./img/letter.png" alt="Рисунок письма" style="border: 1px solid black; display: block; margin: 0px auto;">
+        
+    </div>
+</body>
+</html>
+

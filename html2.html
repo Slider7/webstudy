@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>HTML</title>
+		<style type="text/css">
+			h3, h2{
+				text-align: center;
+			}
+			.main{
+				width: 80%;
+				margin: 12px auto;
+			}
+			p{
+				text-align: justify;
+				margin-top: 8px;
+				margin-bottom: 8px;
+			}
+			pre, code{
+				margin-top: 8px;
+				margin-bottom: 8px;
+			}
+			body{
+				font-size: 1.2em;
+			}
+			.main-elements{
+				font-size: 1.4em;
+				background: lightgreen;
+				border: 2px dashed green;
+			}
+			.main-elements li{
+				margin-top: 12px;
+			}
+			pre{
+				font-size: 1.2em;
+				color: navy;
+				
+			}
+		</style>
+		
+	</head>
+	
+	<body>
+		<div class="main">
+			<h3>Добро пожаловать на второе занятие!</h3>
+			<h2>HTML углубленное форматирование текста</h2>
+			
+			<h3>Списки определений</h3>
+				<p>
+					Сейчас мы знаем 2 типа списков в HTML - нумерованные и ненумерованные, есть еще третий тип списка, с которым вы иногда встретитесь — список определений. Цель этих списков состоит в том, чтобы пометить набор элементов и их связанных описаний, таких как термины и определения или вопросы и ответы. 
+				</p>
+				<p>
+					Список определений состоит из двух элементов&nbsp;— термина и его определения.     
+					Сам список задается с помощью контейнера <span class="tag">&lt;dl&gt;</span>, термин&nbsp;— тегом 
+					<span class="tag">&lt;dt&gt;</span>, а его определение&nbsp;— с помощью     тега <span class="tag">&lt;dd&gt;</span>. 
+				</p>
+				<p>Структура списка определений:</p>
+				<pre>
+				<code class="no-buttons">
+				&lt;dl&gt;
+			  	  &lt;dt&gt;Термин 1&lt;/dt&gt;
+			    	    &lt;dd&gt;Определение 1&lt;/dd&gt;
+			  	  &lt;dt&gt;Термин 2&lt;/dt&gt;
+			    	    &lt;dd&gt;Определение 2&lt;/dd&gt;
+				&lt;/dl&gt;
+				</code>
+				</pre>
+				
+				<p>
+					Пример списка определений:
+					<img src="./img/task2-list.png" alt="пример">
+				</p>
+
+				<pre>
+					Скопируйте текст и сделайте список, как в примере.
+				<code class="no-buttons">
+				Тег
+				      Тег — это специальный символ разметки, который применяется для 
+				      вставки различных элементов на веб-страницу таких как: рисунки, 
+				      таблицы, ссылки и др., и для изменения их вида.
+				HTML-документ
+				      Обычный текстовый файл, который может содержать в себе текст, 
+				      теги и стили. Изображения и другие объекты хранятся отдельно. 
+				      Содержимое такого файла обычно называется HTML-код.
+				Сайт
+				     Cайт — это набор отдельных веб-страниц, которые связаны между собой 
+				     ссылками и единым оформлением.				
+				</code>
+				</pre>
+
+			<h3>Цитаты</h3>
+			<p> 
+				Тег <span class="tag">&lt;blockquote&gt;</span> предназначен для выделения 
+    			длинных цитат внутри документа. Текст, обозначенный этим тегом, традиционно 
+    			отображается как выровненный блок с отступами слева и справа (примерно по 40 
+    			пикселов), а также с отбивкой сверху и снизу. 
+    		</p>
+
+    		<pre>
+    			<code class="no-buttons">&lt;blockquote&gt;Текст&lt;/blockquote&gt;</code>
+    		</pre>
+
+			<h3>Строчные цитаты</h3>
+				<p>
+					Строчные цитаты работают точно так же, за исключением того, что они используют элемент <code>&lt;q&gt;</code>. Цитаты автоматически отображаются в браузере в кавычках. 
+					Тег <code> &lt;cite&gt;</code> помечает текст как цитату или сноску на другой материал.
+					Браузеры обычно устанавливают текст внутри элемента <code> &lt;cite&gt;</code> курсивом.
+				</p>
+
+				<img src="./img/task2-cite.png" alt="пример">
+				
+				<p>Вот что получится:</p>
+				<p><em>Айзек Азимов</em></p>
+				<p>
+					<q>Нельзя сказать человеку: «Ты можешь творить. 
+				   Так давай, твори». Гораздо вернее подождать, пока он 
+				   сам не скажет: «Я могу творить, и я буду творить, хотите 
+				   вы этого или нет».</q>
+				</p>
+				<p><cite>http://www.asimovonline.com</cite></p>
+
+			<h3 style="color: green;">Некоторые текстовые теги, которые могут Вам встретиться:</h3>
+			<ul>
+				<li>
+					<h4>Аббревиатуры</h4>
+					<p>Иногда нужно использовать надстрочный или подстрочный индекс при разметке, напримре, даты, химические формулы и математические уравнения. Элементы &lt;sup&gt; и &lt;sub&gt; созданы для таких ситуаций.</p>
+					<pre>&lt;p&gt;Мы используем &lt;abbr title="Hypertext Markup Language"&gt;HTML&lt;/abbr&gt; для структурирования наших веб-документов.&lt;/p&gt;</pre>
+					Мы используем <abbr title="Hypertext Markup Language">HTML</abbr> для структурирования наших веб-документов.
+				</li>
+				<li>
+					<h4>Верхний и нижний индекс</h4>
+					<pre><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>Химическая формула кофеина: C<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sub</span><span class="token punctuation">&gt;</span></span>8<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>sub</span><span class="token punctuation">&gt;</span></span>H<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sub</span><span class="token punctuation">&gt;</span></span>10<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>sub</span><span class="token punctuation">&gt;</span></span>N<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sub</span><span class="token punctuation">&gt;</span></span>4<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>sub</span><span class="token punctuation">&gt;</span></span>O<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sub</span><span class="token punctuation">&gt;</span></span>2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>sub</span><span class="token punctuation">&gt;</span></span>.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>Если x<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sup</span><span class="token punctuation">&gt;</span></span>2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>sup</span><span class="token punctuation">&gt;</span></span> равно 9, x должен равняться 3 или -3.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span></code></pre>
+					
+					<p>Результат этого кода выглядит следующим образом:</p>
+					<p>Химическая формула кофеина:&nbsp;C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>.</p>
+					<p>Если x<sup>2</sup> равно 9, x должен&nbsp;равняться 3 или -3.</p>
+				</li>
+				<li>
+					<h4>Представление компьютерного кода</h4>
+					<ul>
+					 <li><a href="/ru/docs/Web/HTML/Element/code"><code>&lt;code&gt;</code></a>: Для разметки общих частей компьютерного кода.</li>
+					 <li><a href="/ru/docs/Web/HTML/Element/pre"><code>&lt;pre&gt;</code></a>: Для сохранения пробелов (как правило, кодовых блоков) —&nbsp;если вы используете отступы или лишние пробелы внутри вашего текста, браузеры будут игнорировать его, и вы не увидите его на вашей отображаемой странице; если вы поместите текст в теги <code>&lt;pre&gt;&lt;/pre&gt;</code>, то ваши пробелы будут отображаться идентично тому, как вы видите текст в редакторе.</li>
+					</ul>
+				</li>
+			</ul>
+
+			<h3 style="color: green;">Выравнивание текста</h3>
+			<p> Для установки выравнивания текста обычно используется тег параграфа <span class="tag">&lt;p&gt;</span> с атрибутом <span class="attribute">align</span>, который определяет способ выравнивания.     Также блок текста допустимо выравнивать с помощью тега <span class="tag">&lt;div&gt;</span> с аналогичным атрибутом <span class="attribute">align</span>. Он может принимать следующие значения:</p>
+
+			<ul>
+				<li><span class="value">left</span> — выравнивание по левому краю, задается по умолчанию;</li>
+				<li><span class="value">right</span> — выравнивание по правому краю;</li>
+				<li><span class="value">center</span> — выравнивание по центру;</li>
+				<li><span class="value">justify</span> — выравнивание по ширине (одновременно по правому и левому краю).   Это значение работает только для текста, длина которого более, чем одна строка. </li>
+			</ul>
+
+			<h3 style="color: green;">Спецсимволы</h3>
+			<p>Для отображения символов, которых нет на клавиатуре,  применяются специальные знаки, начинающиеся с амперсанда (&amp;) и  заканчивающиеся точкой с запятой (;). Некоторые популярные спецсимволы:</p>
+			<table class="data">
+				<tbody>
+					<tr><th>Имя</th><th>Код</th><th>Вид</th><th>Описание</th></tr>
+					<tr>
+						<td>&amp;nbsp;</td><td>&amp;#160;</td><td>&nbsp;</td><td>неразрывный пробел</td></tr>
+						<tr><td>&amp;pound;</td><td>&amp;#163;</td><td>£</td><td>фунт стерлингов</td></tr>
+						<tr><td>&amp;euro;</td><td>&amp;#8364;</td><td>€</td><td>знак евро</td></tr>
+						<tr><td>&amp;para;</td><td>&amp;#182;</td><td>¶</td><td>символ параграфа</td></tr>
+						<tr><td>&amp;sect;</td><td>&amp;#167;</td><td>§</td><td>параграф</td></tr>
+						<tr><td>&amp;copy;</td><td>&amp;#169;</td><td>©</td><td>знак copyright</td></tr>
+						<tr><td>&amp;reg;</td><td>&amp;#174;</td><td>®</td><td>знак зарегистрированной торговой марки</td></tr>
+						<tr><td>&amp;trade;</td><td>&amp;#8482;</td><td>™</td><td>знак торговой марки</td></tr>
+						<tr><td>&amp;deg;</td><td>&amp;#176;</td><td>°</td><td>градус</td></tr>
+						<tr><td>&amp;plusmn;</td><td>&amp;#177;</td><td>±</td><td>плюс-минус</td></tr>
+					</tr>
+				</tbody>
+			</table>
+			
+			<h2 class="main-elements">
+			<a href="./task-letter.html"> Работа с текстом - ЗАДАНИЕ: Разметка письма</a>
+			</h2>
+		</div>
+	</body>
+</html>
