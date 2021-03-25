@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Пример формы</title>
+  <style>
+    html, body {
+      background-color: #338D55;
+      text-align: center;
+      font-family: Helvetica, sans-serif;
+      min-width: 300px;
+    }
+
+    form{
+      padding: 5px;
+      background-color: #ABEBC6;
+      width: 70%;
+      margin: auto;
+      border-radius: 5px;
+    }
+
+    input{
+      width: 200px
+    }
+
+    legend{
+      text-align: center;
+    }
+    .recomRadio, .improveCheck{
+      width: 40%;
+      margin: 15px auto;
+      text-align: left;
+    }
+
+    input[type="radio"]{
+      width: 50px;
+    }
+
+    input[type="checkbox"]{
+      width: 50px;
+    }
+    .dropdown {
+      height: 30px;
+      width: 160px;
+      padding: 5px;
+      margin-top: 15px;
+      border: 1px solid lightgrey;
+    }
+    textarea{
+      width: 75%;
+    }
+</style>
+</head>
+<body>
+  <h1>Форма опроса</h1>
+  <div class="form-container">
+    <form>
+      <p>Подскажите нам, как улучшить наш сайт:</p>
+      <div class="form-div">
+        <p>  
+          <label for "name">* ФИО: </label>
+          <input class="field" type="text" id="name" name="name" placeholder="Ваше ФИО" required/>
+        </p>
+        <p>  
+          <label for "mail">* e-mail: </label>
+          <input class="field" type="email" id="email" name="email" placeholder="Ваш email" required/>
+        </p>
+        <p>  
+          <label for "age">* Возраст: </label>
+          <input class="field" type="number" id="number" name="age" min="5" max="140" placeholder="Ваш возраст"/>
+        </p>
+        <div>  
+          <label for="status">Ваш текущий статус?</label>
+          
+          <select id="dropdown" name="status" class="dropdown">
+            <option disabled value>Выберите вариант </option>
+            <option  value="student">Студент</option>
+            <option value="job">Работаю(полный раб.день)</option>
+            <option value="learner">Просто учусь</option>
+            <option value="preferNo">Не скажу</option>
+          </select>
+
+        </div>
+        
+        <fieldset class="recomRadio">
+          <legend>Готовы ли Вы рекомендовать друзьям наш сайт?</legend>
+          <input id="one" type="radio" name="items" value="1">
+          <label for="one">Да, конечно!</label><br>
+          <input id="two" type="radio" name="items" value="2">
+          <label for="two">Возможно.</label><br>
+          <input id="three" type="radio" name="items" value="3">
+          <label for="three">Сомневаюсь.</label>
+        </fieldset>
+        
+         <fieldset class="improveCheck">
+          <legend>Что можно было бы улучшить на нашем сайте(в будущем)?</legend>
+          <label><input name="prefer" value="1" type="checkbox">
+           Дизайн сайта</label><br>
+          <label><input name="prefer" value="2" type="checkbox">
+           Переделать структуру</label><br>
+          <label><input name="prefer" value="3" type="checkbox">
+           Добавить разделы/темы</label><br>
+          <label><input name="prefer" value="4" type="checkbox">
+           Добавить форум/комментарии</label><br> 
+          <label><input name="prefer" value="5" type="checkbox">
+           Добавить справку/обучение</label> 
+        </fieldset>
+        
+        <div>
+          <label for="comments">Ваши комментарии и предложения?</label>
+          <textarea 
+            class="input-field" 
+            style="height:60px;resize:vertical;" 
+            name="comment" 
+            placeholder="Введите Ваши комментарии сюда ..."></textarea>
+
+        </div>
+
+      </div>
+      
+      <button type="submit">Отправить</button>
+    </form>
+
+  </div>
+</body>
+</html>
